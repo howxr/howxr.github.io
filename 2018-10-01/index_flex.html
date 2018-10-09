@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="flexslider.css" />
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery.flexslider-min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        height: 2000px;
+        /* background-image: url("picture/01-素材/BANNER照片/07.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%  50%;  */
+    }
+    .bg{
+        background-image: url("picture/01-素材/BANNER照片/07.jpg");
+        background-repeat:no-repeat;
+        background-size:100% 100%; 
+        height: 1000px;
+    }
+    .relative1{
+        position: relative;
+    }
+    .relative2{
+        position: relative;
+        top: -50%;
+        width:100%;
+    }
+    .navbar{
+        padding: 0px 0;
+        /*background-color: #4b4ba2;*/
+    }
+    nav.navbar .logo{
+        height: 90px;
+        padding-top: 5px;
+        /*margin: 10px 0 10px 0 ;*/
+    }
+    nav .navitems{
+        color: white;
+        float: right;
+        margin-top:30px;
+        font-size: 30px;
+    }
+    nav .navitems a:hover{
+        color:turquoise;
+    }
+    
+    nav .navitems a{
+        margin: 0 10px;
+        color: white;
+        text-decoration:none; 
+    }
+    .box{
+        width: 33.33%;
+        padding: 20px;
+        display:inline-flex;
+        justify-content:space-around;
+        flex-wrap:nowrap;
+    }
+    .box-protect{
+        width: 37.33%;
+        padding: 40px;
+        display:inline-flex;
+        justify-content:space-around;
+        flex-wrap:nowrap;
+        margin-top: 44px;
+        margin-bottom: 20px;
+        border:5px dashed;
+        border-color: cadetblue;
+        border-radius: 112px;
+    }
+    .box-protect-text{
+        font-size: 50px;
+        margin: 50px;
+        word-wrap:break-word;
+        word-break: break-all;
+    }
+    .main{
+        width: 59%;
+        /* height: 24%; */
+        /* padding: 20px; */
+        display:inline-flex;
+        justify-content:space-around;
+        flex-wrap:nowrap;
+        margin-left: 17%;
+    }
+    .main-text{
+        /* width: 20%;
+        padding: 20px;
+        display:inline-flex; */
+        justify-content:space-around;
+        flex-wrap:nowrap;
+        margin-left: 40%;
+        margin-top: 1%;
+        font-size: 24px;
+        /* text-align: center; */
+    }
+    .more{
+        font-size: 20px;
+        /*text-align: right;*/
+        position:absolute;
+        right: 35%;
+    }
+    .more-hk{
+        font-size: 20px;
+        position:absolute;
+        right: 35%;
+    }
+    .list{
+        justify-content: center;
+        margin-left:41%;
+    }
+    .list2{
+        justify-content: center;
+        margin-left: 30%;
+    }
+    .list3{
+        justify-content: center;
+        margin-left: 41%;
+    }
+    
+    #doph-white{
+        width:399px;
+        height: 256px;
+    }
+    .container-top{
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #ffffff17;
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    .moblie-nav-toggle{
+        display: none;
+        float: right;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 10px;
+        border:1px solid black;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .moblie-nav-toggle i{
+        color: black;
+        font-size: 24px;
+        
+    }
+    .mobile-navbar{
+        display: none;
+        border-top: 1px solid white;
+        background-color: white;
+        padding: 15px 0;
+    }
+    .mobile-navbar ul{
+        list-style-type: none;
+        padding: 0 40px;
+    }
+    .mobile-navbar li a{
+        display: block;
+        border-bottom:5px solid black;
+        padding:10px 0;
+    }
+
+    .mobile-navbar.active{
+        display: block;
+    }
+
+    .mobile-navbar a{
+        color: black;
+     }
+
+    .clearfix{
+        clear: both;
+    }
+    @media screen and (max-width:1200px){
+        .box{
+            width:100%;
+        }
+    }
+    @media screen and (max-width:600px){
+        nav .navitems{
+            display: none;
+        }
+        .moblie-nav-toggle{
+            display: block;
+        }
+       
+    }
+</style>
+</head>
+<body>
+    <div class="relative1">
+    <div class="bg"></div> 
+    </div> 
+    <div class="relative2"> 
+        <nav class="navbar">
+             
+            <div class="container-top">
+             <img class="logo" src="picture/logo.png" alt="">
+                <div class="navitems">
+                    <a href="#">首頁</a>
+                    <a href="#">品種</a>
+                    <a href="#">保育協會</a>
+                    <a href="#">保育報導</a>
+                </div>
+            <div id="moblie-nav-toggle" class="moblie-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+             </div>
+        </nav>
+    </div>
+    <div class="mobile-navbar">
+        <ul>
+            <li><a class="link" href="#">Link1</a></li>
+            <li><a class="link" href="#">Link1</a></li>
+            <li><a class="link" href="#">Link1</a></li>
+            <li><a class="link" href="#">Link1</a></li>
+            <li><a class="link" href="#">Link1</a></li>
+        </ul>
+    </div>
+    
+    <div class="list"><img src="picture/01-素材/字體/品種.png" alt=""></div>
+        <div class="container">
+            <div class="box">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="picture/01-素材/海豚照片/中華白海豚.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h2 class="card-title">中華白海豚</h2>
+                          <h6 class="doph-doph-title">形態特徵</h6>
+                          <p class="card-doph">背部中間高大隆起且座上一個彎鉤的小背鰭</p>
+                          <h6 class="doph-area-title">分部海域</h6>
+                          <p class="card-area">印度洋及西太平洋的熱帶到溫帶海域 </p>
+                          <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E7%99%BD%E6%B5%B7%E8%B1%9A" class="btn btn-primary">More</a>
+                        </div>
+                </div>
+            </div>
+            <div class="box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="picture/01-素材/海豚照片/熱帶斑海豚.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h2 class="card-title">熱帶斑海豚</h2>
+                              <h6 class="doph-doph-title">形態特徵</h6>
+                              <p class="card-doph">白色唇線與吻端</p>
+                              <h6 class="doph-area-title">分部海域</h6>
+                              <p class="card-area">熱帶至亞熱帶海域</p>
+                              <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E7%99%BD%E6%B5%B7%E8%B1%9A" class="btn btn-primary">More</a>
+                            </div>
+                    </div>
+            </div>
+            <div class="box">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="picture/01-素材/海豚照片/弗氏海豚.JPG" alt="Card image cap">
+                            <div class="card-body">
+                              <h2 class="card-title">弗氏海豚</h2>
+                              <h6 class="doph-doph-title">形態特徵</h6>
+                              <p class="card-doph">嘴喙短小，背鰭呈三角形,黑的背側、灰色的眼帶與乳白色或粉紅色的腹側</p>
+                              <h6 class="doph-area-title">分部海域</h6>
+                              <p class="card-area">東熱帶太平洋、東蘇拉海及夏威夷</p>
+                              <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E7%99%BD%E6%B5%B7%E8%B1%9A" class="btn btn-primary">More</a>
+                            </div>
+                    </div>
+                </div>
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic1"></div>
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic2"></div>
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic3"></div>
+            <div  class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, nobis eveniet omnis quod tempore, deserunt nostrum aut quidem adipisci quia minima fugit autem quo, ducimus veniam quaerat temporibus quae quas?</div>
+            <div  class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consectetur id nisi deserunt cupiditate vitae eveniet voluptatibus nam consequatur quasi quibusdam, hic dolor atque ipsam nulla blanditiis illum! Facilis, ea?</div>
+            <div  class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, enim. Quos, adipisci harum. Repellat architecto beatae, omnis voluptas esse facere nulla tempora, autem dolorum consequuntur rem unde voluptates, facilis similique.</div>
+        
+
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic1"></div>
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic2"></div>
+            <div  class="box"><img id="doph-white" class="mobile-doph-white" src="" alt="pic3"></div>
+            <div  class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, nobis eveniet omnis quod tempore, deserunt nostrum aut quidem adipisci quia minima fugit autem quo, ducimus veniam quaerat temporibus quae quas?</div>
+            <div  class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consectetur id nisi deserunt cupiditate vitae eveniet voluptatibus nam consequatur quasi quibusdam, hic dolor atque ipsam nulla blanditiis illum! Facilis, ea?</div>
+            <div  class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, enim. Quos, adipisci harum. Repellat architecto beatae, omnis voluptas esse facere nulla tempora, autem dolorum consequuntur rem unde voluptates, facilis similique.</div>
+            <div class="clearfix"></div>
+
+    <div class="list2"><img src="picture/01-素材/字體/品種.png" alt=""></div>
+        <div class="box-protect"><img src="picture/01-素材/海豚協會/Dolphin_conservation.jpg" alt=""></div>
+        <div class="box-protect-text">香港海豚保育協會
+            <div>網址:hk.hkdcs.org/</div>
+            <p class="more-hk">more</p>
+        </div>
+        <div class="box-protect"><img src="picture/01-素材/海豚協會/logo.png" alt=""></div>
+        <div class="box-protect-text">中華鯨豚協會
+            <div> 網址:www.whale.org.tw/</div>
+            <p class="more">more</p>
+        </div>
+    </div>
+    
+    <div class="list3"><img src="picture/01-素材/字體/品種.png" alt=""></div>
+    <div class="main"><iframe width="1004" height="753" src="https://www.youtube.com/embed/ygmONNNBV7w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+    <div class="main-text">海豚保育數量增 漁民怨漁獲變少</div>
+    <div class="main"><a href="https://pets.ettoday.net/news/1090548"><img width="1000" height="500" src="picture/01-素材/保育相關報導/14年.jpg" alt=""></a></div>
+    <div class="main-text">14年來驟減百隻…港剩47條　中華白海豚保育評級上調至「易危」</div>
+    <div class="main"><a href="https://www.ettoday.net/news/20121003/109922.htm"><img width="1000" height="500" src="picture/01-素材/保育相關報導/六輕危害.jpg" alt=""></a></div>
+    <div class="main-text">六輕危害「中華白海豚」生存　保育措施有條件通過</div>
+    <div class="main"><a href="https://pets.ettoday.net/news/806562"><img width="1000" height="500" src="picture/01-素材/保育相關報導/比槓珠澳大橋.jpg" alt=""></a></div>
+    <div class="main-text">比港珠澳大橋填海還嚴重！　西濱風機將毀白海豚棲地</div>
+    <script>
+        var mobileNavToggle = document.querySelector("#moblie-nav-toggle");
+            console.log('text');
+            mobileNavToggle.onclick = function () {
+            // 當按鈕按下去時,將選單切換(toggle) Class 'active'
+            console.log('text1');
+            document.querySelector(".mobile-navbar").classList.toggle('active');
+             }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

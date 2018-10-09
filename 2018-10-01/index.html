@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+    }
+    /*/.d-flex{
+        display: flex;
+        justify-content: space-between;
+    }*/
+    .navbar{
+        padding: 15px 0;
+        background-color: #6565c3;
+    }
+    nav.navbar .logo{
+        height: 90px;
+        padding-top: 5px;
+        /*margin: 10px 0 10px 0 ;*/
+    }
+    nav .navitems{
+        color: white;
+        float: right;
+        margin-top:30px;
+        font-size: 30px;
+    }
+    nav .navitems a:hover{
+        color:turquoise;
+    }
+    
+    nav .navitems a{
+        margin: 0 10px;
+        color: white;
+        text-decoration:none; 
+    }
+   
+    
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #bebeda;
+    }
+    .moblie-nav-toggle{
+        display: none;
+        float: right;
+        margin-top: 20px;
+        margin-left: 5px;
+        margin-right: 10px;
+        border:1px solid black;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .moblie-nav-toggle i{
+        color: black;
+        font-size: 24px;
+        
+    }
+    .mobile-navbar{
+        display: none;
+        border-top:1px solid white;
+        background-color: black;
+        padding: 15px 0;
+    }
+    .mobile-navbar.active{
+        display: block;
+    }
+    .mobile-navbar a{
+        color: white;
+    }
+    .box{
+        width: 33.33%;
+        float: left;
+        padding: 20px;
+    }
+    .clearfix{
+        clear: both;
+    }
+    @media screen and (max-width:1200px){
+        .box{
+            width:100%;
+        }
+    }
+    @media screen and (max-width:600px){
+        nav .navitems{
+            display: none;
+        }
+        .moblie-nav-toggle{
+            display: block;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            
+                <div class="nav-logo">
+                    <a href="/">
+                     <img class="logo" src="picture/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="navitems">
+                    <a href="#">首頁</a>
+                    <a href="#">品種</a>
+                    <a href="#">保育協會</a>
+                    <a href="#">保育報導</a>
+                </div>
+                <div id="moblie-nav-toggle" class="moblie-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            
+        </div>
+    </nav>
+    <div class="moblie-navbar">
+        <ul>
+            <li><a class="link" href="#">首頁</a></li>
+            <li><a class="link" href="#">品種</a></li>
+            <li><a class="link" href="#">保育協會</a></li>
+            <li><a class="link" href="#">保育報導</a></li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum quos iusto voluptatibus ullam incidunt, veniam optio nihil quis inventore est, harum reiciendis distinctio, eligendi illum laboriosam fugiat dolor magni?</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt dicta natus ea corporis? Possimus quo necessitatibus consequatur odit! Optio quaerat ipsa voluptate labore commodi velit, ut accusamus. Corrupti, aliquid.</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus in voluptatem at saepe reprehenderit animi temporibus facere soluta consequatur ab porro nam nisi eligendi sed possimus, harum ipsum tempore quis!</div>
+        <div class="clearfix"></div>
+    </div>
+    <script>
+         var mobileNavToggle = document.querySelector("#mobile-nav-toggle");
+        mobileNavToggle.onclick = function () {
+            // 當按鈕按下去時,將選單切換(toggle) Class 'active'
+            document.querySelector(".mobile-navbar").classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
